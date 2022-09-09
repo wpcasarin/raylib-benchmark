@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #222222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  background-color: black;
+}
+
+#score {
+  font-size: 2rem;
+  font-weight: bold;
+  color: yellow;
+  margin: 2px;
+  position: absolute;
+}
