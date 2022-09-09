@@ -5,8 +5,8 @@ import pyray as rl
 import raylib as rc
 from raylib import colors
 
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 800
+SCREEN_WIDTH = 600
+SCREEN_HEIGHT = 600
 FPS = 60
 
 
@@ -15,11 +15,11 @@ def pyversion():
     texture = rl.load_texture("texture.png")
     while not rl.window_should_close():
         rl.begin_drawing()
-        rl.draw_fps(700, 700)
+        rl.draw_fps(500, 550)
         rl.clear_background(colors.BLACK)
         for i in range(5000):
-            rl.draw_texture(texture, random.randint(0, 500),
-                            random.randint(0, 500), (255, 255, 255, 255))
+            rl.draw_texture(texture, random.randint(0, 400),
+                            random.randint(0, 400), (255, 255, 255, 255))
         rl.end_drawing()
     rl.close_window()
     sys.exit()
@@ -30,11 +30,11 @@ def cversion():
     texture = rc.LoadTexture(b"texture.png")
     while not rc.WindowShouldClose():
         rc.BeginDrawing()
-        rc.DrawFPS(700, 700)
+        rc.DrawFPS(500, 550)
         rc.ClearBackground(colors.BLACK)
         for i in range(5000):
-            rc.DrawTexture(texture, random.randint(0, 500),
-                           random.randint(0, 500), (255, 255, 255, 255))
+            rc.DrawTexture(texture, random.randint(0, 400),
+                           random.randint(0, 400), (255, 255, 255, 255))
             # rc.DrawTexture(texture, 100, 100, (255, 255, 255, 255))
         rc.EndDrawing()
     rc.CloseWindow()
@@ -42,5 +42,5 @@ def cversion():
 
 
 if __name__ == "__main__":
-    # pyversion()
-    cversion()
+    pyversion()
+    # cversion()

@@ -6,8 +6,8 @@
 #endif
 
 // Global Variables Definition
-static const int screenWidth = 800;
-static const int screenHeight = 800;
+static const int screenWidth = 600;
+static const int screenHeight = 600;
 
 // Module functions declaration
 void UpdateDrawFrame(Texture2D texture);
@@ -47,10 +47,10 @@ void UpdateDrawFrame(Texture2D texture)
     // Draw
     BeginDrawing();
     ClearBackground(BLACK);
-    DrawFPS(700, 700);
+    DrawFPS(500, 550);
     for (int i = 0; i < 5000; i++)
     {
-        DrawTexture(texture, randomRange(0, 500), randomRange(0, 500), WHITE);
+        DrawTexture(texture, randomRange(0, 400), randomRange(0, 400), WHITE);
         // DrawTexture(texture, 100, 100, WHITE);
     }
     EndDrawing();

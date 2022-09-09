@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include "raylib.h"
 
-const int screenWidth = 800;
-const int screenHeight = 800;
+const int screenWidth = 600;
+const int screenHeight = 600;
 
 int randomRange(int min, int max)
 {
@@ -18,11 +18,11 @@ int main(void)
   while (!WindowShouldClose())
   {
     BeginDrawing();
-    DrawFPS(700, 700);
+    DrawFPS(500, 550);
     ClearBackground(BLACK);
     for (int i = 0; i < 5000; i++)
     {
-      DrawTexture(texture, randomRange(0, 500), randomRange(0, 500), WHITE);
+      DrawTexture(texture, randomRange(0, 400), randomRange(0, 400), WHITE);
       // DrawTexture(texture, 100, 100, WHITE);
     }
     EndDrawing();

@@ -21,7 +21,7 @@ const loop = () => {
   window.requestAnimationFrame(loop);
   ctx.clearRect(0, 0, screenWidth, screenHeight);
   for (let i = 0; i < 5000; i++) {
-    ctx.drawImage(img, randomRange(0, 500), randomRange(0, 500));
+    ctx.drawImage(img, randomRange(0, 400), randomRange(0, 400));
   }
   getFPS();
 };
